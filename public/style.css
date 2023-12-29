@@ -141,20 +141,19 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   max-width: 1200px;
-  margin: 30px 125px;
+  margin: 30px auto;
 }
 
 .note-component {
   border-radius: 11px;
   background: #fff;
   box-shadow: 0px 4px 41px -12px rgba(0, 0, 0, 0.25);
-  width: 400px;
 }
 
 .note-component .text-content {
   padding: 20px;
   padding-bottom: 10px;
-  color: rgb(80, 79, 79);
+  /* color: rgb(80, 79, 79); */
 }
 
 .note-component .note-bottom {
@@ -163,7 +162,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: rgb(80, 79, 79);
+  /* color: rgb(80, 79, 79); */
 }
 
 .note-component hr {
@@ -174,7 +173,7 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
-  color: rgb(80, 79, 79);
+  /* color: rgb(80, 79, 79); */
 }
 
 .note-component .note-button {
@@ -185,12 +184,12 @@ body {
 
 .note-component h3 {
   font-size: 20px;
-  color: rgb(80, 79, 79);
+  /* color: rgb(80, 79, 79); */
 }
 
 .note-component p {
   margin-top: 10px;
-  color: rgb(80, 79, 79);
+  /* color: rgb(80, 79, 79); */
 }
 
 .input-section {
@@ -230,6 +229,7 @@ body {
   border: 0;
   padding: 10px 20px;
   width: fit-content;
+  width: -moz-fit-content;
   border-radius: 4px;
   background: linear-gradient(
     265deg,
@@ -239,6 +239,7 @@ body {
   );
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
   cursor: pointer;
   color: white;
   font-weight: bold;
@@ -249,4 +250,66 @@ body {
 .submit-btn:active {
   transform: scale(0.5);
   transition: 1s;
+}
+
+.colorChangeIcon {
+  background-color: #fff;
+  outline: none;
+  border: none;
+}
+
+.delete-btn {
+  background-color: #fff;
+  outline: none;
+  border: none;
+}
+
+@media only screen and (max-width: 1390px) {
+  .note-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 1210px) {
+  .note-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .note-component {
+    margin: 0 20px;
+  }
+  .infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+  }
+  .info1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .input-section .textarea,
+  .takenote {
+    width: 69%;
+  }
+  .input-section {
+    width: 100%;
+  }
+  .background {
+    height: 480px;
+    padding: 20px 0;
+  }
+  .wishes {
+    text-align: center;
+    font-size: 10vw;
+  }
 }

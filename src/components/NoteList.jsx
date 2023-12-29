@@ -11,6 +11,7 @@ function NoteList(props) {
             id={index}
             title={noteitem.title}
             content={noteitem.content}
+            theme={noteitem.theme}
             onDelete={props.onDelete}
           />
         );
