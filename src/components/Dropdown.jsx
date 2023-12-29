@@ -85,7 +85,7 @@ function Dropdown(props) {
               style={{
                 ...noteTheme[color],
                 border: `1px solid ${
-                  color === theme.backgroundColor
+                  theme && color === theme.backgroundColor
                     ? "purple"
                     : "rgb(227, 227, 227)"
                 }`,
